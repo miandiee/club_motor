@@ -1,0 +1,7 @@
+# Kode .htaccess ini digunakan untuk mengaktifkan modul Rewrite pada server dan menentukan aturan rewrite URL
+
+# Mengaktifkan modul Rewrite
+RewriteEngine On
+
+# Aturan Rewrite: Mengubah URL dari /index.php?x=<nilai> menjadi /<nilai>
+RewriteRule ^([a-zA-Z0-9]+)$ index.php?x=$1
