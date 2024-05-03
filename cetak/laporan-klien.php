@@ -13,9 +13,10 @@ class PDF extends FPDF {
         $this->SetFillColor(180, 180, 255);
         $this->SetDrawColor(50, 50, 100);
         $this->Cell(10, 5, 'NO', 1, 0, '', true);
-        $this->Cell(30, 5, 'NAMA', 1, 0, '', true);
+        $this->Cell(20, 5, 'NAMA', 1, 0, '', true);
         $this->Cell(40, 5, 'JENIS KELAMIN', 1, 0, '', true);
-        $this->Cell(40, 5, 'ALAMAT', 1, 1, '', true);
+        $this->Cell(40, 5, 'ALAMAT', 1, 0, '', true);
+        $this->Cell(60, 5, 'PEKERJAAN', 1, 1, '', true);
     }
 }
 
@@ -32,9 +33,10 @@ while ($data = mysqli_fetch_array($query)) {
     $data['jenis_kelamin'] = $data['jenis_kelamin'] == 'P' ? 'Perempuan' : 'Laki laki';
 
     $pdf->Cell(10, 5, $nomor, 1, 0);
-    $pdf->Cell(30, 5, $data['nama_klien'], 1, 0);
+    $pdf->Cell(20, 5, $data['nama_klien'], 1, 0);
     $pdf->Cell(40, 5, $data['jenis_kelamin'], 1, 0);
-    $pdf->Cell(40, 5, $data['alamat'], 1, 1);
+    $pdf->Cell(40, 5, $data['alamat'], 1, 0);
+    $pdf->Cell(60, 5, $data['pekerjaan'], 1, 1);
     $nomor++;
 }
 

@@ -49,6 +49,14 @@ function active_radio_button($value, $input)
                      <input class="form-control" type="text" value="<?php echo $row['alamat']; ?>" name="alamat">
                   </div>
                   <div class="mb-3">
+                     <label for="pekerjaan" class="form-label">PEKERJAAN</label>
+                     <input class="form-control" type="text" value="<?php echo $row['pekerjaan']; ?>" name="pekerjaan">
+                  </div>
+                  <div class="mb-3">
+                     <label for="testimoni" class="form-label">TESTIMONI</label>
+                     <textarea class="form-control" name="testimoni" rows="5"><?php echo $row['testimoni']; ?></textarea>
+                  </div>
+                  <div class="mb-3">
                      <button class="btn btn-primary mt-2" type="submit" value="simpan">SIMPAN PERUBAHAN</button>
                      <a href="klien.php" class="btn btn-secondary mt-2" role="button">Kembali</a>
                   </div>

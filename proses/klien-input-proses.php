@@ -20,7 +20,7 @@ if (!in_array($ext, $allowed_extensions)) {
 }
 
 // Memeriksa ukuran file
-if ($ukuran > 1044070) { // 1MB = 1044070 bytes
+if ($ukuran > 3132210) { // 1MB = 1044070 bytes
    header("location: ../klien-input.php?alert=gagal_ukuran");
    exit();
 }
@@ -39,9 +39,11 @@ if (!move_uploaded_file($tmp_name, $upload_dir . $newName)) {
 $nama = $_POST['nama'];
 $jenis_kelamin = $_POST['jenis_kelamin'];
 $alamat = $_POST['alamat'];
+$pekerjaan = $_POST['pekerjaan'];
+$testimoni = $_POST['testimoni'];
 
 // Query SQL untuk insert data klien
-$query = "INSERT INTO klien (nama_klien, jenis_kelamin, alamat, foto_klien) VALUES ('$nama', '$jenis_kelamin', '$alamat', '$newName')";
+$query = "INSERT INTO klien (nama_klien, jenis_kelamin, alamat, pekerjaan,  testimoni, foto_klien) VALUES ('$nama', '$jenis_kelamin', '$alamat', '$pekerjaan', '$testimoni', '$newName')";
 
 // Menjalankan query
 if (mysqli_query($conn, $query)) {

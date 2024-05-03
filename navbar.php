@@ -31,19 +31,20 @@
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                      <li class="nav-item ">
-                        <a class="nav-link" href="#">Produk</span></a>
+                        <a class="nav-link" href="index.php#produk">Produk</span></a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="index.php#media">Artikel</a>
+                     </li>
+
+                     <li class="nav-item ">
+                        <a class="nav-link" href="index.php#media">Galeri</span></a>
                      </li>
                      <li class="nav-item ">
-                        <a class="nav-link" href="#">Artikel</span></a>
+                        <a class="nav-link" href="index.php#media">Event</span></a>
                      </li>
                      <li class="nav-item ">
-                        <a class="nav-link" href="#">Galeri</span></a>
-                     </li>
-                     <li class="nav-item ">
-                        <a class="nav-link" href="#">Event</span></a>
-                     </li>
-                     <li class="nav-item ">
-                        <a class="nav-link" href="#">Tentang Kami</span></a>
+                        <a class="nav-link" href="index.php#about">Tentang Kami</span></a>
                      </li>
                   </ul>
                </div>

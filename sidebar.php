@@ -85,7 +85,7 @@
                   <hr>
                   <p>Settings</p>
                   <li>
-                        <a href="#" class="nav-link">
+                        <a href="proses/logout-proses.php" class="nav-link">
                               Logout
                         </a>
                   </li>

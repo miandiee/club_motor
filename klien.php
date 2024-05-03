@@ -25,6 +25,8 @@ include 'sidebar.php';
                                     <th scope="col">Nama Klien</th>
                                     <th scope="col">Jenis Kelamin</th>
                                     <th scope="col">Alamat</th>
+                                    <th scope="col">Pekerjaan</th>
+                                    <th scope="col">Testimoni</th>
                                     <th scope="col">Aksi</th>
                               </tr>
                         </thead>
@@ -42,8 +44,10 @@ include 'sidebar.php';
                                     <td>" . $row['nama_klien'] . "</td>
                                     <td>" . $jenis_kelamin . "</td>
                                     <td>" . $row['alamat'] . "</td>
-                                    <td>
-                                    <a href='klien-edit.php?id_klien=$row[id_klien]' class='btn btn-outline-warning' role='button'>Edit</a>
+                                    <td>" . $row['pekerjaan'] . "</td>
+                                    <td>" . $row['testimoni'] . "</td>
+                                    <td class='text-center'>
+                                    <a href='klien-edit.php?id_klien=$row[id_klien]' class='btn btn-outline-warning' role='button'>Edit</a> </br></br>
                                     <a href='proses/klien-delete-proses.php?id_klien=$row[id_klien]' class='btn btn-outline-danger' role='button' onclick='return confirmDelete()'>Delete</a>
                                     </td>
                               </tr>";

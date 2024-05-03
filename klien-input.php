@@ -37,6 +37,14 @@ include 'proses/connect.php';
                                           <input class="form-control" type="text" name="alamat">
                                     </div>
                                     <div class="mb-3">
+                                          <label for="pekerjaan" class="form-label">PEKERJAAN</label>
+                                          <input class="form-control" type="text" name="pekerjaan">
+                                    </div>
+                                    <div class="mb-3">
+                                          <label for="testimoni" class="form-label">TESTIMONI</label>
+                                          <textarea class="form-control" name="testimoni" rows="5"></textarea>
+                                    </div>
+                                    <div class="mb-3">
                                           <button class="btn btn-primary" type="submit" value="simpan">SIMPAN</button>
                                     </div>
                               </form>

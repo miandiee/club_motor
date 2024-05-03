@@ -2,12 +2,10 @@
 include 'connect.php';
 
 // Menyimpan data dari form ke dalam variabel
-$id = $_POST['id_klien'];
-$nama = $_POST['nama'];
-$jenis_kelamin = $_POST['jenis_kelamin'];
-$alamat = $_POST['alamat'];
-$pekerjaan = $_POST['pekerjaan'];
-$testimoni = $_POST['testimoni'];
+$id = $_POST['id_produk'];
+$nama_produk = $_POST['nama'];
+$kategori = $_POST['kategori'];
+$harga_jual = $_POST['hargajual'];
 
 // Mengunggah foto baru jika ada
 if ($_FILES['foto']['size'] > 0) {
@@ -19,7 +17,7 @@ if ($_FILES['foto']['size'] > 0) {
     // Memeriksa ekstensi file
     $allowed_extensions = array('png', 'jpg', 'jpeg');
     if (!in_array($ext, $allowed_extensions)) {
-        header("location: ../klien-edit.php?id_klien=$id&alert=gagal_ekstensi");
+        header("location: ../produk-edit.php?id_produk=$id&alert=gagal_ekstensi");
         exit();
     }
 
@@ -27,16 +25,16 @@ if ($_FILES['foto']['size'] > 0) {
     $newName = $rand . '_' . $filename;
     move_uploaded_file($tmp_name, '../foto/' . $newName);
 
-    // Mengupdate foto klien di database
-    mysqli_query($conn, "UPDATE klien SET foto_klien='$newName' WHERE id_klien='$id'");
+    // Mengupdate foto produk di database
+    mysqli_query($conn, "UPDATE produk SET foto_produk='$newName' WHERE id_produk='$id'");
 }
 
-// Memperbarui data klien ke dalam database
-$query = "UPDATE klien SET nama_klien='$nama', jenis_kelamin='$jenis_kelamin', alamat='$alamat', pekerjaan='$pekerjaan', testimoni='$testimoni' WHERE id_klien='$id'";
+// Memperbarui data produk ke dalam database
+$query = "UPDATE produk SET nama_produk='$nama_produk', kategori='$kategori', harga_jual='$harga_jual' WHERE id_produk='$id'";
 mysqli_query($conn, $query);
 
-// Mengalihkan kembali ke halaman klien.php
-header("location:../klien.php");
+// Mengalihkan kembali ke halaman produk.php
+header("location:../produk.php");
 
 // Tutup koneksi ke database
 mysqli_close($conn);
